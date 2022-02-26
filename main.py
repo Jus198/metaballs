@@ -97,16 +97,16 @@ def main():
     Ball_list.append(c4)
     Ball_list.append(c5)
 
-    chunk = 1
+    chunk = 5
     frame = 0
     while True:
         frame += 1
         # weird and bad fps scaling code
-        # if frame % 20 == 0:
-        #     fps = clock.get_fps()
-        #     print("Chunk:", chunk, " FPS:", fps)
-        #     if fps < 20:
-        #         chunk += 2
+        if frame % 20 == 0:
+            fps = clock.get_fps()
+            print("Chunk:", chunk, " FPS:", fps)
+            if fps < 20:
+                chunk += 2
 
 
         clock.tick(100)
